@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tic Tac Toe</h1>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon-sun">&#9728;</span>
+        <span class="icon-moon">&#9790;</span>
+      </button>
+    </header>
+
+    <!-- Setup Screen -->
+    <div id="setup" class="screen">
+      <div class="player-setup">
+        <h2>Player 1 (X)</h2>
+        <input type="text" id="p1-name" placeholder="Enter name" maxlength="15" value="Player 1">
+        <label>Pick color for X:
+          <input type="color" id="p1-color" value="#e74c3c">
+        </label>
+      </div>
+      <div class="player-setup">
+        <h2>Player 2 (O)</h2>
+        <input type="text" id="p2-name" placeholder="Enter name" maxlength="15" value="Player 2">
+        <label>Pick color for O:
+          <input type="color" id="p2-color" value="#3498db">
+        </label>
+      </div>
+      <button id="start-btn" class="btn-primary">Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game" class="screen hidden">
+      <div id="status" class="status"></div>
+      <div id="board" class="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <div class="scoreboard">
+        <span id="score-p1"></span>
+        <span class="score-divider">|</span>
+        <span id="score-draw">Draws: 0</span>
+        <span class="score-divider">|</span>
+        <span id="score-p2"></span>
+      </div>
+      <div class="game-buttons">
+        <button id="restart-btn" class="btn-secondary">Restart</button>
+        <button id="new-game-btn" class="btn-secondary">New Players</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
